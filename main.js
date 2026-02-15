@@ -194,7 +194,7 @@ charLoader.load('./valentinModel.glb', (gltf) => {
   if ("metalness" in m) m.metalness = Math.min(m.metalness, 0.1);
 });
     scene.add(juan.instance);
-    juan.instance.add(new THREE.AxesHelper(2))
+    
 }
 )
 let heart = null;
@@ -261,8 +261,7 @@ light.shadow.bias = -0.0002;        // helps acne
 light.shadow.normalBias = 0.02;     // helps acne on glTF
 
 scene.add(light);
-const helper = new THREE.DirectionalLightHelper( light, 5 );
-scene.add( helper );
+ 
 
 light.shadow.normalBias = 0.1;
  
